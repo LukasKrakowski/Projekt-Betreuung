@@ -5,8 +5,9 @@ package de.krakowski.lukas.view;
 // =====================================================
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
-import de.krakowski.lukas.controller.Controller;
+import de.krakowski.lukas.controller.RechnungController;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -34,7 +35,7 @@ public class View extends Application {
     // =================================================
     private BorderPane root;
     private VBox menu; // Sidebar global
-    private Controller derController;
+    private RechnungController derController;
     private View dieView;
    
 
@@ -54,7 +55,7 @@ public class View extends Application {
     @Override
     public void start(Stage stage) {
 
-        derController = new Controller(this);
+        derController = new RechnungController(this);
 
         root = new BorderPane();
 
@@ -251,9 +252,11 @@ public class View extends Application {
     // =====================================================
     private void steuerung() {
 
+        var rechnungController = new RechnungController(this);
+
         // Linkes Menü ================================
         btnStart.setOnAction(e -> setContent(startSeite()));
-        btnRechnungErstellen.setOnAction(e -> setContent(new Label("Rechnung erstellen – TODO")));
+        btnRechnungErstellen.setOnAction(e -> setContent(new Label(rechnungController.erstelleRechnungen())));
         btnOffeneAuftraege.setOnAction(e -> setContent(new Label("Offene Aufträge – TODO")));
 
         // Top-Menü ==================================
