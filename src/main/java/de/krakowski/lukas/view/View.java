@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import de.krakowski.lukas.controller.RechnungController;
+import de.krakowski.lukas.controller.RechnungBereitstellenController;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -35,7 +35,7 @@ public class View extends Application {
     // =================================================
     private BorderPane root;
     private VBox menu; // Sidebar global
-    private RechnungController derController;
+    private RechnungBereitstellenController derController;
     private View dieView;
    
 
@@ -55,7 +55,7 @@ public class View extends Application {
     @Override
     public void start(Stage stage) {
 
-        derController = new RechnungController(this);
+        derController = new RechnungBereitstellenController(this);
 
         root = new BorderPane();
 
@@ -252,7 +252,7 @@ public class View extends Application {
     // =====================================================
     private void steuerung() {
 
-        var rechnungController = new RechnungController(this);
+        var rechnungController = new RechnungBereitstellenController(this);
 
         // Linkes Menü ================================
         btnStart.setOnAction(e -> setContent(startSeite()));

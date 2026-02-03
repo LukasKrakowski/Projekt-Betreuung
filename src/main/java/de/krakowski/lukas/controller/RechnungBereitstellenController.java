@@ -2,10 +2,10 @@ package de.krakowski.lukas.controller;
 
 import de.krakowski.lukas.view.View;
 
-public class RechnungController {
+public class RechnungBereitstellenController {
     private View dieView;
 
-    public RechnungController(View pView){
+    public RechnungBereitstellenController(View pView){
         dieView = pView;
     }
 
@@ -15,4 +15,3 @@ public class RechnungController {
     }
     
 }
-

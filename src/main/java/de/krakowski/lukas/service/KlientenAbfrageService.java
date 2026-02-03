@@ -10,7 +10,7 @@ public class KlientenAbfrageService {
 
 
     // Input: Datum
-    //Output: Name, Abrechnungsstatus
+    //Hollt Daten aus DB und erzeugt damit das Objekt "KlientTO"
 
     public KlientTO klientenAbfrage (Timestamp zeit){
         
