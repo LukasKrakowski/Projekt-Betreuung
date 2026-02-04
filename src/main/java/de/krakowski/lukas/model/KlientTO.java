@@ -7,22 +7,46 @@ public class KlientTO {
 
     private String vorName;
     private String nachName;
-    private String ID;
+    private String VorgangsNummer;
     private Boolean abrechnungsStatus;
+
 
     public KlientTO(String vorName, Boolean abrechnungsStatus) {
         this.vorName = vorName;
         this.abrechnungsStatus = abrechnungsStatus;
     }
 
-    public String getName() {
+
+    // Namen
+    public String getVorName() {
         return vorName;
     }
 
-    public void setName(String name) {
+    public void setVorName(String vorName) {
         this.vorName = vorName;
     }
 
+
+    public String getNachName() {
+        return nachName;
+    }
+
+    public void setNachName(String nachName) {
+        this.nachName = nachName;
+    }
+
+
+    // ID
+    public String getVorgangsNummer() {
+        return VorgangsNummer;
+    }
+
+    public void setVorgangsNummer(String iD) {
+        VorgangsNummer = iD;
+    }
+   
+
+    // Abrechnungsstatus
     public Boolean getAbrechnungsStatus() {
         return abrechnungsStatus;
     }
