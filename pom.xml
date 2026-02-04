@@ -19,7 +19,6 @@
 
   <dependencyManagement>
     <dependencies>
-
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
@@ -54,6 +53,13 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
+    </dependency>
+    <!-- Source: https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>3.0.6</version>
+        <scope>compile</scope>
     </dependency>
     <!-- Optionally: parameterized tests support -->
     <dependency>
