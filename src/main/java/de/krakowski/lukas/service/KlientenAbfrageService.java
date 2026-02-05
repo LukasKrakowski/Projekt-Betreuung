@@ -9,13 +9,13 @@ import de.krakowski.lukas.model.KlientTO;
 public class KlientenAbfrageService {
 
 
-    // Input: Datum
+    // Input: Rechnungsempfänger(Amtsgericht);Sachbearbeiter;Aktenzeichen;KlientVorname;KlientNachname;Betreuungsanfang;FinanzStatus;WohnStatus;AbrechnungsStatus;
     //Hollt Daten aus DB und erzeugt damit das Objekt "KlientTO"
 
     public KlientTO klientenAbfrage (Timestamp zeit){
         
         
-        return new KlientTO("null", true);
+        return new KlientTO("null", "null", "null","null", "null", "null", "null", true);
     }
 
 }

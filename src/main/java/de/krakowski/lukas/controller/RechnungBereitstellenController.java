@@ -8,9 +8,11 @@ public class RechnungBereitstellenController {
     public RechnungBereitstellenController(View pView){
         dieView = pView;
     }
+    // Gibt View die Fertige PDF zurück + Meldet DB das Klient bearbeitet wurde
 
     public String erstelleRechnungen() {
         // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'erstelleRechnungen'");
     }
     
