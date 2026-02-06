@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>A4 PDF Template</title>
+    <style>
+        /* PDF-Druckeinstellungen: Definiert das physikalische Papierformat */
+        @page {
+            size: A4;
+            margin: 0; /* Verhindert Standard-Browser-Ränder */
+        }
+
+        body {
+            background-color: #f0f0f0; /* Hintergrund nur für Browser-Vorschau */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Das "Blatt Papier" */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            padding: 20mm; /* Dein gewünschter Innenabstand */
+            margin: 10mm auto; /* Zentriert die Vorschau im Browser */
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            overflow: hidden; /* Verhindert, dass Inhalt über den Rand rutscht */
+        }
+
+        /* Einstellungen beim eigentlichen Druckvorgang / PDF-Export */
+        @media print {
+            body {
+                background: none;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <h1>Dein PDF-Inhalt</h1>
+        <p>Dieses Div hat exakt die Größe einer A4-Seite.</p>
+    </div>
+
+</body>
+</html>
