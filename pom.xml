@@ -54,20 +54,35 @@
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- Source: https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+
+    <!--KI Generiert-->
+
+    <!-- PDFBox 2.x -->
     <dependency>
         <groupId>org.apache.pdfbox</groupId>
         <artifactId>pdfbox</artifactId>
-        <version>3.0.6</version>
-        <scope>compile</scope>
+        <version>2.0.24</version>
     </dependency>
-    <!-- Source: https://mvnrepository.com/artifact/com.openhtmltopdf/openhtmltopdf-pdfbox -->
+
+    <!-- OpenHTMLtoPDF mit PDFBox 2.x -->
     <dependency>
         <groupId>com.openhtmltopdf</groupId>
         <artifactId>openhtmltopdf-pdfbox</artifactId>
         <version>1.0.10</version>
-        <scope>compile</scope>
+        <exclusions>
+            <!-- Verhindert Konflikt, falls OpenHTMLtoPDF eigene PDFBox-Abhängigkeiten bringt -->
+            <exclusion>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>xmpbox</artifactId>
+            </exclusion>
+        </exclusions>
     </dependency>
+
+
     <!-- Optionally: parameterized tests support -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
