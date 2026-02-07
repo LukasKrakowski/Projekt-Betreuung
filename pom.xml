@@ -58,29 +58,27 @@
     <!--KI Generiert-->
 
     <!-- PDFBox 2.x -->
-    <dependency>
-        <groupId>org.apache.pdfbox</groupId>
-        <artifactId>pdfbox</artifactId>
-        <version>2.0.24</version>
-    </dependency>
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.24</version>
+</dependency>
 
-    <!-- OpenHTMLtoPDF mit PDFBox 2.x -->
-    <dependency>
-        <groupId>com.openhtmltopdf</groupId>
-        <artifactId>openhtmltopdf-pdfbox</artifactId>
-        <version>1.0.10</version>
-        <exclusions>
-            <!-- Verhindert Konflikt, falls OpenHTMLtoPDF eigene PDFBox-Abhängigkeiten bringt -->
-            <exclusion>
-                <groupId>org.apache.pdfbox</groupId>
-                <artifactId>pdfbox</artifactId>
-            </exclusion>
-            <exclusion>
-                <groupId>org.apache.pdfbox</groupId>
-                <artifactId>xmpbox</artifactId>
-            </exclusion>
-        </exclusions>
-    </dependency>
+<!-- XMPBox 2.x -->
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>xmpbox</artifactId>
+    <version>2.0.24</version>
+</dependency>
+
+<!-- OpenHTMLtoPDF mit PDFBox 2.x -->
+<dependency>
+    <groupId>com.openhtmltopdf</groupId>
+    <artifactId>openhtmltopdf-pdfbox</artifactId>
+    <version>1.0.10</version>
+    <!-- Keine exclusions -->
+</dependency>
+
 
 
     <!-- Optionally: parameterized tests support -->

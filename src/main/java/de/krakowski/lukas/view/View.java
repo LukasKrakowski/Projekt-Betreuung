@@ -256,7 +256,17 @@ public class View extends Application {
 
         // Linkes Menü ================================
         btnStart.setOnAction(e -> setContent(startSeite()));
-        btnRechnungErstellen.setOnAction(e -> setContent(new Label(rechnungController.erstelleRechnungen())));
+
+        btnRechnungErstellen.setOnAction(e -> {
+            Image rechnungImage = rechnungController.erhalteRechnung();
+                if (rechnungImage != null) {
+                    ImageView imageView = new ImageView(rechnungImage);
+                    setContent(imageView);
+                } else {
+                setContent(new Label("Fehler beim Laden der Rechnung."));
+            }
+        });
+
         btnOffeneAuftraege.setOnAction(e -> setContent(new Label("Offene Aufträge – TODO")));
 
         // Top-Menü ==================================
