@@ -210,17 +210,6 @@ public class View extends Application {
 
     private Node rechnungErstellen(){
 
-        var rechnungController = new RechnungBereitstellenController(this);
-
-
-        
-        Image rechnungImage = rechnungController.erhalteRechnung();
-            if (rechnungImage != null) {
-                ImageView imageView = new ImageView(rechnungImage);
-                setContent(imageView);
-            } else {
-            setContent(new Label("Fehler beim Laden der Rechnung."));
-        }
         return null;
     }
 

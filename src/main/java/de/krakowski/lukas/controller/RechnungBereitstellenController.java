@@ -17,14 +17,5 @@ public class RechnungBereitstellenController {
 
     // Gibt View die Fertige PDF zurück + Meldet DB das Klient bearbeitet wurde
 
-    public Image erhalteRechnung() {
-        RechnungFormatierenPDFService pdfRechnung = new RechnungFormatierenPDFService();
-        try {
-            // PDF wird intern in Image konvertiert
-            return pdfRechnung.rechnungFormatieren();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+   
 }
