@@ -7,14 +7,13 @@
   <groupId>de.krakowski.lukas</groupId>
   <artifactId>projekt-betreuung</artifactId>
   <version>1.0-SNAPSHOT</version>
-
   <name>projekt-betreuung</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>25</maven.compiler.release>
+    <!-- Zentrale Versionsverwaltung: Nur hier ändern -->
+    <javafx.version>25.0.1</javafx.version>
   </properties>
 
   <dependencyManagement>
@@ -30,58 +29,48 @@
   </dependencyManagement>
 
   <dependencies>
+    <!-- JavaFX -->
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>27-ea+1</version>
-      <scope>compile</scope>
+      <version>${javafx.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
-      <version>27-ea+1</version>
+      <version>${javafx.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-swing</artifactId>
-      <version>27-ea+1</version>
+      <version>${javafx.version}</version>
     </dependency>
 
+    <!-- PDFBox -->
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+      <version>2.0.24</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>xmpbox</artifactId>
+      <version>2.0.24</version>
+    </dependency>
+
+    <!-- HTML zu PDF -->
+    <dependency>
+      <groupId>com.openhtmltopdf</groupId>
+      <artifactId>openhtmltopdf-pdfbox</artifactId>
+      <version>1.0.10</version>
+    </dependency>
+
+    <!-- Tests -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <scope>test</scope>
     </dependency>
-
-    <!--KI Generiert-->
-
-    <!-- PDFBox 2.x -->
-<dependency>
-    <groupId>org.apache.pdfbox</groupId>
-    <artifactId>pdfbox</artifactId>
-    <version>2.0.24</version>
-</dependency>
-
-<!-- XMPBox 2.x -->
-<dependency>
-    <groupId>org.apache.pdfbox</groupId>
-    <artifactId>xmpbox</artifactId>
-    <version>2.0.24</version>
-</dependency>
-
-<!-- OpenHTMLtoPDF mit PDFBox 2.x -->
-<dependency>
-    <groupId>com.openhtmltopdf</groupId>
-    <artifactId>openhtmltopdf-pdfbox</artifactId>
-    <version>1.0.10</version>
-    <!-- Keine exclusions -->
-</dependency>
-
-
-
-    <!-- Optionally: parameterized tests support -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
@@ -89,5 +78,30 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <plugins>
+
+      <!-- maven-compiler-plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <release>25</release>
+        </configuration>
+      </plugin>
+
+      <!--  javafx-maven-plugin  -->
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+        <configuration>
+          <mainClass>de.krakowski.lukas.App</mainClass>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
 
 </project>
