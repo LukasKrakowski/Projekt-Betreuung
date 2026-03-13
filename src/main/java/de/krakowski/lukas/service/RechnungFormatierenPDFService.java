@@ -23,12 +23,12 @@ public class RechnungFormatierenPDFService {
 
     // HTML-Datei aus resources laden
     public InputStream ladeHTMLRechnung() {
-        InputStream streamRechnung = getClass().getResourceAsStream("/rechnungPDF.html");
-        if (streamRechnung == null) {
-            throw new IllegalStateException("Resource 'rechnungPDF.html' nicht gefunden");
-        }
-        return streamRechnung;
+    InputStream streamRechnung = getClass().getResourceAsStream("/rechnungPDF.html");
+    if (streamRechnung == null) {
+        throw new IllegalStateException("Resource 'rechnungPDF.html' nicht gefunden");
     }
+    return streamRechnung;
+}
 
     // HTML InputStream → String
     public String htmlString(InputStream htmlStream) throws IOException {
@@ -51,23 +51,18 @@ public class RechnungFormatierenPDFService {
     }
 
     // PDF Bytes → BufferedImage
-    public BufferedImage BufferedImageRechnung(byte[] pdfBytes) throws IOException {
+    public BufferedImage bufferedImageRechnung(byte[] pdfBytes) throws IOException {
 
-    try (PDDocument document = PDDocument.load(new ByteArrayInputStream(pdfBytes))) {
-        PDFRenderer renderer = new PDFRenderer(document);
-        return renderer.renderImageWithDPI(0, 150);
-    }
-}
-
-
-    // PDDocument → BufferedImage
-    public BufferedImage BufferedImageRechnung(PDDocument document) throws IOException {
-        PDFRenderer renderer = new PDFRenderer(document);
-        return renderer.renderImageWithDPI(0, 150);
+        try (PDDocument document = PDDocument.load(new ByteArrayInputStream(pdfBytes))) {
+            PDFRenderer renderer = new PDFRenderer(document);
+            return renderer.renderImageWithDPI(0, 150);
+        }
     }
 
     // BufferedImage → JavaFX Image
-    public Image FXImageRechnung(BufferedImage bufferedImage) {
-        return SwingFXUtils.toFXImage(bufferedImage, null);
+    public Image fXImageRechnung(BufferedImage bufferedImage) {
+        
+        return SwingFXUtils.toFXImage(bufferedImage, null); 
     }
+    
 }
