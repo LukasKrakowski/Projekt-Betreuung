@@ -6,21 +6,22 @@ import javafx.scene.image.Image;
 
 public class RechnungspacketErzeugenController {
 
+    //-----------Variablen----------------
     private Image pdfImage;
     private byte[] pdfBytes;
     private String nameKlient;
-    private RechnungFormatierenPDFService rechnungFormatierenPDFService = new RechnungFormatierenPDFService();
+    private RechnungFormatierenPDFService rechnungFormatierenPDFService;
+    //-------------------------------------
 
-    public RechnungspacketErzeugenController(){
+   public RechnungspacketErzeugenController(RechnungFormatierenPDFService rechnungFormatierenPDFService){
 
-         
-
-        
-    }
+        this.rechnungFormatierenPDFService = rechnungFormatierenPDFService;
+   }
 
     public RechnungTO rechnungsPacketObjektErstellen(){
 
-        return new RechnungTO(null, null, null);
+    RechnungTO rechnungTO = new RechnungTO(null, null, null);  // Neues Rechnungsobjekt wird erstellt
+    return rechnungTO;
     }
 
 }

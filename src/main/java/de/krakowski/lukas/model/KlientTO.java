@@ -5,6 +5,7 @@ package de.krakowski.lukas.model;
 
 public class KlientTO {
 
+    //-----------Varaiablen-------------
     private String rechnungsempfaenger;
     private String sachbearbeiter;
     private String aktenzeichen;
@@ -13,8 +14,9 @@ public class KlientTO {
     private String finanzStatus;
     private String wohnStatus;
     private Boolean abrechnungsStatus;
+    //----------------------------------
 
-
+    //-----------Konstruktor------------
      public KlientTO(String rechnungsempfeanger, String sachbearbeiter, String aktenzeichen, String klientVorName, String klientNachName, String finanzStatus, String wohnStatus, Boolean abrechnungsStatus) {
         this.rechnungsempfaenger = rechnungsempfeanger;
         this.sachbearbeiter = sachbearbeiter;
@@ -25,14 +27,13 @@ public class KlientTO {
         this.wohnStatus = wohnStatus;
         this.abrechnungsStatus = abrechnungsStatus;
     }
+    //----------------------------------
 
+
+
+    //---------------getter-------------
     public String getRechnungsempfaenger() {
         return rechnungsempfaenger;
-    }
-
-
-    public void setRechnungsempfaenger(String rechnungsempfaenger) {
-        this.rechnungsempfaenger = rechnungsempfaenger;
     }
 
 
@@ -41,18 +42,8 @@ public class KlientTO {
     }
 
 
-    public void setSachbearbeiter(String sachbearbeiter) {
-        this.sachbearbeiter = sachbearbeiter;
-    }
-
-
     public String getAktenzeichen() {
         return aktenzeichen;
-    }
-
-
-    public void setAktenzeichen(String aktenzeichen) {
-        this.aktenzeichen = aktenzeichen;
     }
 
 
@@ -61,18 +52,8 @@ public class KlientTO {
     }
 
 
-    public void setKlientVorName(String klientVorName) {
-        this.klientVorName = klientVorName;
-    }
-
-
     public String getKlientNachName() {
         return klientNachName;
-    }
-
-
-    public void setKlientNachName(String klientNachName) {
-        this.klientNachName = klientNachName;
     }
 
 
@@ -81,35 +62,14 @@ public class KlientTO {
     }
 
 
-    public void setFinanzStatus(String finanzStatus) {
-        this.finanzStatus = finanzStatus;
-    }
-
-
     public String getWohnStatus() {
         return wohnStatus;
-    }
-
-
-    public void setWohnStatus(String wohnStatus) {
-        this.wohnStatus = wohnStatus;
     }
 
 
     public Boolean getAbrechnungsStatus() {
         return abrechnungsStatus;
     }
-
-
-    public void setAbrechnungsStatus(Boolean abrechnungsStatus) {
-        this.abrechnungsStatus = abrechnungsStatus;
-    }
-
-
-   
-
-
-    
-
+    //----------------------------------
 
 }

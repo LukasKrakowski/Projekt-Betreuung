@@ -18,37 +18,25 @@ public class RechnungTO {
         this.pdfBytes = pdfBytes;
         this.nameKlient= nameKlient;
     }
-    //----------------------------------
+    //-----------------------------------
 
 
 
-    //---Image---geter&setter-----------
+    //---Image---geter-------------------
     public Image getPdfImage() {
         return pdfImage;
     }
-
-    public void setPdfImage(Image pdfImage) {
-        this.pdfImage = pdfImage;
-    }
     //-----------------------------------
 
-    //---Bytes---geter&setter------------
+    //---Bytes---geter-------------------
     public byte[] getPdfBytes() {
         return pdfBytes;
     }
-
-    public void setPdfBytes(byte[] pdfBytes) {
-        this.pdfBytes = pdfBytes;
-    }
     //-----------------------------------
 
-    //---Name---geter&setter-------------
+    //---Name---geter--------------------
     public String getNameKlient() {
         return nameKlient;
-    }
-
-    public void setNameKlient(String nameKlient) {
-        this.nameKlient = nameKlient;
     }
     //-----------------------------------
 }
