@@ -1,4 +1,4 @@
-package de.krakowski.lukas.controller;
+package de.krakowski.lukas.service;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -6,17 +6,16 @@ import java.io.InputStream;
 
 import de.krakowski.lukas.model.KlientTO;
 import de.krakowski.lukas.model.RechnungTO;
-import de.krakowski.lukas.service.RechnungFormatierenPDFService;
 import javafx.scene.image.Image;
 
-public class RechnungspacketErzeugenController {
+public class RechnungspacketErzeugenService {
 
     //-----------Variablen----------------
     private RechnungFormatierenPDFService rechnungFormatierenPDFService;
     //-------------------------------------
 
     //-----------Konstruktor--------------
-    public RechnungspacketErzeugenController(RechnungFormatierenPDFService rechnungFormatierenPDFService) {
+    public RechnungspacketErzeugenService(RechnungFormatierenPDFService rechnungFormatierenPDFService) {
         this.rechnungFormatierenPDFService = rechnungFormatierenPDFService;
     }
     //-------------------------------------

@@ -49,6 +49,13 @@ public class View extends Application {
     private MenuItem miKlientBearbeiten;
     private MenuItem miKlientenAnsehen;
 
+    // ==============Konstruktor========================
+    public View (){
+
+    }
+
+    // ==============Konstruktor Ende===================
+
     // =================================================
     // Seite Laden Beginn
     // =================================================
